@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css?family=Kalam|Lobster');
+
+body{
+    background-image: url("images/tile.jpg");
+    padding: 10px;
+    min-width: 400px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Lobster';
+    font-size: 45px;
+    color: #243656;
+    text-shadow: 0px 1px 3px #303030;
+}
+
+#formadd{
+    background-image: url("images/formbg.jpg");
+    background-repeat: repeat-y;
+    padding: 15px;
+    box-shadow: 0px 0px 3px 1px #303030;
+    max-width: 580px;
+    min-width: 380px;
+    margin: auto;
+}
+
+input[type='text'], textarea{
+    font-size: 16px;
+    background-color: #ffff99;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 100%;
+    border: 1px gray solid;
+    color: #303030;
+    padding-left: 5px;
+}
+
+input[type='text']{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+textarea{
+    font-family: 'Kalam',Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+label{
+    margin-left: 5px;
+    color: #303030;
+}
+
+#dhc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 27px;
+}
+
+#dhc div{
+    background-color: #fddd3a;
+    border: 1px gray solid;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+}
+
+#dateform, #timeform{
+    padding-left: 5px;
+    height: 28px;
+    background-color: #ffff99;
+    border: none;
+    border-left: 1px gray solid;
+}
+
+#dateform{
+    width: 160px;
+}
+
+#divbuttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+button{
+    width: 40%;
+}
+
+#paperboard{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.paperc{
+    background-image: url("images/notebg.png");
+    width: 175px;
+    height: 250px;
+    margin: 15px;
+    padding: 15px;
+    position: relative;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.titlepaper{
+    width: 135px;
+    height: 22px;
+    font-size: 18px;
+    position: absolute;
+    top: 38px;
+    text-align: center;
+    text-decoration: underline;
+    overflow: hidden;
+}
+
+.notepaper{
+    width: 145px;
+    height: 123px;
+    padding-left: 2px;
+    position: absolute;
+    top: 72px;
+    word-wrap: break-word;
+    overflow: hidden;
+    color:#243656;
+    font-family: 'Kalam',Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+.paperc:hover .notepaper{
+    overflow: auto;
+}
+.datepaper{
+    font-size: 14px;
+    font-weight: 600;
+    width: 160px;
+    position: absolute;
+    bottom: 25px;
+}
+.timepaper{
+    font-size: 14px;
+    font-weight: 600;
+    width: 160px;
+    position: absolute;
+    bottom: 8px;
+}
+
+.fa-times-circle{
+    color: gray;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.fa-times-circle:hover{
+    cursor: pointer;
+    color: #303030;
+}
+
+.paperc:hover .fa-times-circle{
+    visibility: visible;
+}
